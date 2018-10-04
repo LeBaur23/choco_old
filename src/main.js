@@ -11,8 +11,10 @@ import './assets/style/style.scss'
 // components
 import LINK_HEADER from './components/link-header.vue'
 import HEADER from './components/header.vue'
+import CHOCO_ICONS from './components/choco-icons.vue'
 Vue.component('chocomart-link-header', LINK_HEADER)
 Vue.component('chocomart-header', HEADER)
+Vue.component('chocomart-icon', CHOCO_ICONS)
 
 Vue.config.productionTip = false
 
