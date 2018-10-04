@@ -5,7 +5,6 @@ import App from './App'
 import router from './router'
 import 'bootstrap-4-grid/css/grid.css'
 
-
 // components
 import LINK_HEADER from './components/link-header.vue'
 import HEADER from './components/header.vue'
