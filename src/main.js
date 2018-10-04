@@ -3,6 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import 'bootstrap-4-grid/css/grid.css'
+
+
+// components
+import LINK_HEADER from './components/link-header.vue'
+import HEADER from './components/header.vue'
+Vue.component('chocomart-link-header', LINK_HEADER)
+Vue.component('chocomart-header', HEADER)
 
 Vue.config.productionTip = false
 
