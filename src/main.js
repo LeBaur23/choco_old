@@ -3,7 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+
+// styles
 import 'bootstrap-4-grid/css/grid.css'
+import './assets/style/style.scss'
 
 // components
 import LINK_HEADER from './components/link-header.vue'
