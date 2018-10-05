@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-md-4" style="background-color: red">
           asda
-          asdasd
+          asdasdasdas
         </div>
         <div class="col-4 col-md-2" style="background-color: yellow">
           asdasd
