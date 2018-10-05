@@ -7,6 +7,7 @@
         <div class="col-md-4" style="background-color: red">
           asda
           asdasdasdas
+          asd
         </div>
         <div class="col-4 col-md-2" style="background-color: yellow">
           asdasd
