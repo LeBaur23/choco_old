@@ -1,1 +1,74 @@
+// components
 @import "./components/link-header";
+
+
+// pages
+@import "./pages/main_page";
+
+
+// colors
+$default_color: #707070;
+
+// TYPOGRAPHY
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+// GLOBAL STYLE
+
+// Grid
+
+.overflow-auto {
+  overflow: auto;
+}
+.float-left {
+  float: left !important;
+}
+.float-right {
+  float: right !important;
+}
+
+// Test
+
+#StyleTesting {
+  h4 {
+    //font-family: Ubuntu;
+    font-weight: 100;
+  }
+  .col-4 {
+    background-color: #acacac;
+    border: 1px solid black;
+  }
+}
+
+
+// default
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Ubuntu, 'sans-serif', Verdana;
+  font-weight: 100;
+  color: $default_color;
+}
+

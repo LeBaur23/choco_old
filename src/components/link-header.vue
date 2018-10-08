@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row linkHeader">
         <div class="linkHeader-support">
-
+          <!--<chocomart-icon :icon="'heart'" :color="'red'" :font_size="'40px'"></chocomart-icon>-->
         </div>
         <div class="linkHeader-phones">
         </div>
