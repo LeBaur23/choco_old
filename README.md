@@ -7,13 +7,13 @@
 
 1) FILES NAME must be like:
               xxxx_page.vue (main_page.vue)
-2) CLASS NAMES of page must be like: \n
-              xxxx-page (main-page )  ===> {
-                       bem for page classes will add like following:
-                        1) xxxx--page--yyy (main-page-wrapper -> for blocks);
-                        2) xxxx--page__yyy
-                        3) xxxx--page__yyy-active
-              }
+2) CLASS NAMES of page must be like:
+xxxx-page (main-page )  ===> {
+         bem for page classes will add like following:
+          1) xxxx--page--yyy (main-page-wrapper -> for blocks);
+          2) xxxx--page__yyy
+          3) xxxx--page__yyy-active
+}
 
 
 > HOW TO CREATE ICONS
