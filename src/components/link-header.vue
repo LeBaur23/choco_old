@@ -1,5 +1,5 @@
 <template>
-  <div id="LinkHeader" style="background-color: red">
+  <div id="LinkHeader" class="">
     <div class="container-fluid">
       <div class="row linkHeader">
         <div class="linkHeader-support">
