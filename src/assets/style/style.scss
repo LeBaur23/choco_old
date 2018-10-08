@@ -9,6 +9,15 @@
 // colors
 $default_color: #707070;
 
+
+// sizes
+$default_size: 16px;
+$h1_size: 28px;
+$h3_size: 18px;
+$price_size: 20px;
+$category_size: 14px;
+$bonus_size: 12px;
+
 // TYPOGRAPHY
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 .font-weight-bold {
@@ -32,11 +41,16 @@ $default_color: #707070;
 .text-capitalize {
   text-transform: capitalize !important;
 }
+.text-underline {
+  text-decoration: underline;
+}
+.text-throughline {
+  text-decoration: line-through;
+}
 
-// GLOBAL STYLE
+// GLOBAL STYLES
 
 // Grid
-
 .overflow-auto {
   overflow: auto;
 }
@@ -62,7 +76,6 @@ $default_color: #707070;
 
 
 // default
-
 html, body {
   margin: 0;
   padding: 0;
@@ -71,4 +84,3 @@ html, body {
   font-weight: 100;
   color: $default_color;
 }
-
