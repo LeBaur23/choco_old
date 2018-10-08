@@ -1,0 +1,38 @@
+@import '../variables';
+
+.product-wrapper {
+  height: 312px;
+  width: 218px;
+  border: 1px solid $border_color;
+  border-radius: 4px;
+  padding: 10px 13px;
+  .promotion-wrapper {
+    height: 45px;
+
+    &__bonus-value {
+      margin-left: 6px;
+      line-height: 1.2;
+      font-size: $bonus_size;
+    }
+  }
+  .image-wrapper {
+    height: 160px;
+    width: 160px;
+  }
+  .description-wrapper {
+    height: 35px;
+    width: 150px;
+    font-size: $default_size;
+    line-height: 1.1;
+  }
+  .rating-wrapper {
+    height: 15px;
+    width: 150px;
+    background: $brand_color;
+  }
+  .price-wrapper {
+    height: 37px;
+    width: 150px;
+    font-size: $price_size;
+  }
+}

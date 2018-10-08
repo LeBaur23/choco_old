@@ -1,5 +1,5 @@
 <template>
   <div id="MainPage">
-    asdasdasd
+    <chocomart-product></chocomart-product>
   </div>
 </template>
