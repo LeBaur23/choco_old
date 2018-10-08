@@ -1,5 +1,9 @@
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
 1) FILES NAME must be like:
               xxxx_page.vue (main_page.vue)
 2) CLASS NAMES of page must be like:
@@ -11,6 +15,14 @@
               }
 
 
+> HOW TO CREATE ICONS
+1) add svg file to path: 'static/icons'
+2) register icon in choco-icons.js on path '/src/choco-icons.js'
+  2.1) add name and path to svg file
+3) use it using <chocomart-icon></chocomart-icon> tag:
+  3.1) to add icon add :icon props like : <chocomart-icon :icon="'some_icon'"></chocomart-icon>
+  3.2) to change size :font_size props like: <chocomart-icon :icon="'some_icon'" :font_size="'XXpx'"></chocomart-icon>
+  3.3) to change color :color props like: <chocomart-icon :icon="'some_icon'" :font_size="'XXpx'" :color="'someColor'"></chocomart-icon>
 
 
 
