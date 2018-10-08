@@ -8,12 +8,13 @@
 1) FILES NAME must be like:
               xxxx_page.vue (main_page.vue)
 2) CLASS NAMES of page must be like: <br/>
-xxxx-page (main-page )  ===> {
-         bem for page classes will add like following:
-          1) xxxx--page--yyy (main-page-wrapper -> for blocks);
-          2) xxxx--page__yyy
-          3) xxxx--page__yyy-active
+xxxx-page (main-page )  ===> {  <br/>
+         bem for page classes will add like following:  <br/>
+          1) xxxx-yyy (header-wrapper -> for blocks);  <br/>
+          2) xxxx__yyy (header__input => for element);  <br/>
+          3) xxxx__yyy--active (header__input--focused => for modificator);  <br/>
 }
+3) COMPONENT NAMES must be: xxx-yyy-zzz.vue (choco-icons.vue)
 
 
 > HOW TO CREATE ICONS
