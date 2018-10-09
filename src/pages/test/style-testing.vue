@@ -1,8 +1,19 @@
 <template>
   <div id="StyleTesting">
+    <h2 class="text-center">TEST</h2>
+    <div class="container-fluid">
+      <div class="row m-0 justify-content-center">
+        <div id="CategoryProducts" >
+            <category-card v-for="i in datas" :icon="i.img" :title="i.title"></category-card>
+            <category-card :discount="true"></category-card>
+        </div>
+      </div>
+    </div>
+
+
     <!-- GIRD START-->
     <h2 class="text-center">CHOCOMART GRID SYSTEM</h2>
-    <div v-if="false" class="container-fluid" style="background-color: grey;border: 1px solid purple">
+    <div class="container-fluid" style="background-color: lightgray;border: 1px solid purple">
       <h4>div container-fluid</h4>
       <div class="row m-0" style="background-color: #ddd;border: 1px solid red">
         <div class="col-12">
@@ -29,7 +40,7 @@
     </div>
     <!--GRID END-->
     <h2 class="text-center mt-5"> CHOCOMART TYPOGRAPHY </h2>
-    <div v-if="false" class="container-fluid">
+    <div class="container-fluid">
       <div class="row m-0">
         <div class="col-4 text-left" style="">
           Text left
@@ -45,3 +56,68 @@
 
   </div>
 </template>
+
+<script>
+  export default {
+    data () {
+      return {
+        datas: [
+          {
+            img: 'fridge.png',
+            title: 'БЫТОВАЯ ТЕХНИКА'
+          },
+          {
+            img: 'tablet.png',
+            title: 'СМАРТФОНЫ И ГАДЖЕТЫ'
+
+          },
+          {
+            img: 'printer.png',
+            title: 'КОМПЬЮТЕРЫ И ОФИС'
+
+          },
+          {
+            img: 'computer.png',
+            title: 'ТВ, АУДИО И ВИДЕО'
+
+          },
+          {
+            img: 'bedside-table.png',
+            title: 'ТОВАРЫ ДЛЯ ДОМА'
+
+          },
+          {
+            img: 'open-book.png',
+            title: 'КНИГИ'
+
+          },
+          {
+            img: 'baby-stroller.png',
+            title: 'ТОВАРЫ ДЛЯ ДЕТЕЙ'
+
+          },
+          {
+            img: 'lotion.png',
+            title: 'КРАСОТА И ЗДОРОВЬЕ'
+
+          },
+          {
+            img: 'palette.png',
+            title: 'ДОСУГ'
+
+          },
+          {
+            img: 'tent.png',
+            title: 'АКТИВНЫЙ ОТДЫХ'
+
+          },
+          {
+            img: 'oven.png',
+            title: 'ПРОМЫШЛЕННАЯ ТЕХНИКА'
+
+          }
+        ]
+      }
+    }
+  }
+</script>

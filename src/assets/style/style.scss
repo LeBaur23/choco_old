@@ -1,5 +1,6 @@
 // components
 @import "./components/link-header";
+@import "./components/category-card";
 
 
 // pages
@@ -50,6 +51,7 @@ $default_color: #707070;
 // Test
 
 #StyleTesting {
+  width: 100%;
   h4 {
     //font-family: Ubuntu;
     font-weight: 100;
@@ -58,15 +60,22 @@ $default_color: #707070;
     background-color: #acacac;
     border: 1px solid black;
   }
+  #CategoryProducts {
+    width: 1180px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 
 // default
 
 html, body {
+  background-color: #f6f6f6;
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
   font-family: Ubuntu, 'sans-serif', Verdana;
   font-weight: 100;
   color: $default_color;
