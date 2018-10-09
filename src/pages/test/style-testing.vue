@@ -5,6 +5,8 @@
     <div class="container-fluid d-flex justify-content-center" style="background: #f6f6f6;">
       <div class="row m-0" style="width: 1130px;">
         <chocomart-product></chocomart-product>
+        <chocomart-product :size="1"></chocomart-product>
+        <chocomart-product :size="2"></chocomart-product>
       </div>
     </div>
     <!-- GIRD START-->
