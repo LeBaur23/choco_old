@@ -1,8 +1,15 @@
 <template>
   <div id="StyleTesting">
+    <!--TEST-->
+    <h2 class="text-center">TEST</h2>
+    <div class="container-fluid d-flex justify-content-center" style="background: #f6f6f6;">
+      <div class="row m-0" style="width: 1130px;">
+        <chocomart-product></chocomart-product>
+      </div>
+    </div>
     <!-- GIRD START-->
     <h2 class="text-center">CHOCOMART GRID SYSTEM</h2>
-    <div v-if="false" class="container-fluid" style="background-color: grey;border: 1px solid purple">
+    <div class="container-fluid" style="background-color: grey;border: 1px solid purple">
       <h4>div container-fluid</h4>
       <div class="row m-0" style="background-color: #ddd;border: 1px solid red">
         <div class="col-12">
@@ -29,7 +36,7 @@
     </div>
     <!--GRID END-->
     <h2 class="text-center mt-5"> CHOCOMART TYPOGRAPHY </h2>
-    <div v-if="false" class="container-fluid">
+    <div class="container-fluid">
       <div class="row m-0">
         <div class="col-4 text-left" style="">
           Text left
