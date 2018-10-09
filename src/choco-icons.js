@@ -1,5 +1,5 @@
 var icons = {
-  'bonus': '../static/icons/coins-bonus.svg',
+  'bonus': '../static/icons/coins.svg',
   'heart': '../static/icons/heart.svg'
 }
 

@@ -4,9 +4,9 @@
     <h2 class="text-center">TEST</h2>
     <div class="container-fluid d-flex justify-content-center" style="background: #f6f6f6;">
       <div class="row m-0" style="width: 1130px;">
-        <chocomart-product></chocomart-product>
-        <chocomart-product :size="1"></chocomart-product>
-        <chocomart-product :size="2"></chocomart-product>
+        <chocomart-product :product_info="obj"></chocomart-product>
+        <chocomart-product :size="1" :product_info="obj"></chocomart-product>
+        <chocomart-product :size="2"  :product_info="obj"></chocomart-product>
       </div>
     </div>
     <!-- GIRD START-->
@@ -47,10 +47,28 @@
           Text center
         </div>
         <div class="col-4 text-right">
-          Text right
+          Text right.
         </div>
       </div>
     </div>
 
   </div>
 </template>
+
+<script>
+  export default {
+    data () {
+      return {
+        obj: {
+          img: '/static/iphone.png',
+          title: 'Смартфон Apple iPhone 6 32 Gb Gold',
+          price: '250 000',
+          rating: '4',
+          rate_count: '13',
+          bonus: '2226'
+        }
+      }
+    }
+  }
+
+</script>
