@@ -2,6 +2,7 @@
   <div id="StyleTesting">
     <h2 class="text-center">TEST</h2>
     <div class="container-fluid">
+      <chocomart-icon :icon="'heart'" :font_size="'22px'"></chocomart-icon>
       <div class="row m-0 justify-content-center">
         <div id="CategoryProducts" >
             <category-card v-for="i in datas" :icon="i.img" :title="i.title"></category-card>

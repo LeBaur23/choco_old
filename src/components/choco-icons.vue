@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <div class="choco__svg" :style="{'color': color,'fontSize': font_size }" v-html="svg_tags">
+  <div class="choco-icon">
+    <div class="choco-icon__svg" :style="{'color': color,'fontSize': font_size }" v-html="svg_tags">
+    </div>
+    <div class="choco-icon_counter">
+      <h4 class="m-0">10</h4>
     </div>
   </div>
 </template>
@@ -41,13 +44,29 @@
   }
 </script>
 <style>
-  .choco__svg {
+  .choco-icon_counter {
+    position: absolute;
+    top:-5px;
+    right: -5px;
+    background-color: #ff5d5d;
+    color: white;
+    padding: 2px;
+    border-radius: 50%;
+  }
+  .choco-icon_counter h4 {
+    font-size: 12px;
+  }
+  .choco-icon{
+    display: inline-block;
+    position: relative;
+  }
+  .choco-icon__svg {
     display: inline-block;
   }
-  .choco__svg svg{
+  .choco-icon__svg svg{
     width: 1em;
   }
-  .choco__svg svg path{
+  .choco-icon__svg svg path{
     fill: currentcolor
   }
 </style>
