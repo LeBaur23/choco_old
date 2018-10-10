@@ -1,7 +1,6 @@
 @import '../variables';
 
 .product-wrapper {
-  align-items: flex-start;
   height: 312px;
   width: 218px;
   border: 1px solid $border_color;
@@ -11,7 +10,6 @@
   margin: 5px;
   .promotion-wrapper {
     height: 45px;
-
     &__bonus-value {
       margin-left: 6px;
       line-height: 1.2;
@@ -19,11 +17,8 @@
     }
   }
   .row {
-    margin: 0;
-    justify-content: center;
-    align-items: center;
     .image-wrapper {
-      height: 160px;
+      height: 140px;
       width: 160px;
       &--big {
         height: 220px;
@@ -35,19 +30,17 @@
       }
     }
     .description-wrapper {
-      height: 87px;
       width: 150px;
       .text-wrapper {
-        height: 35px;
         font-size: $default_size;
         line-height: 1.1;
+        margin-bottom: 3px;
       }
       .rating-wrapper {
         height: 13px;
+        margin-bottom: 5px;
         .stars-wrapper {
           position: relative;
-          display: flex;
-          align-items: center;
           width: 70px;
           background: #e9e9e9;
           &__percentage {
@@ -57,8 +50,6 @@
           &__image {
             position: initial;
             z-index: 2;
-            height: 100%;
-            width: 100%;
           }
         }
         .rating-count-wrapper {
@@ -68,15 +59,27 @@
         }
       }
       .price-wrapper {
-        height: 37px;
+        height: 30px;
         font-size: $price_size;
       }
     }
   }
 }
+.discount {
+  padding: 0 !important;
+  width: 446px;
+}
+//Style for big and small product card
 .product-wrapper--big {
   width: 446px;
   align-items: flex-start !important;
+
+  .text-wrapper {
+    text-align: left !important;
+  }
+  .price-wrapper {
+    justify-content: flex-start !important;
+  }
 }
 .product-wrapper--small {
   flex-direction: row-reverse !important;
@@ -93,5 +96,16 @@
   .product-wrapper__row--small {
     margin-left: 10px;
     height: 100%;
+    text-align: left !important;
+
+    .description-wrapper {
+      width: 150px;
+      .text-wrapper {
+        text-align: left !important;
+      }
+      .price-wrapper {
+        justify-content: flex-start !important;
+      }
+    }
   }
 }

@@ -4,9 +4,10 @@
     <h2 class="text-center">TEST</h2>
     <div class="container-fluid d-flex justify-content-center" style="background: #f6f6f6;">
       <div class="row m-0" style="width: 1130px;">
-        <chocomart-product :product_info="obj"></chocomart-product>
-        <chocomart-product :size="1" :product_info="obj"></chocomart-product>
-        <chocomart-product :size="2"  :product_info="obj"></chocomart-product>
+        <chocomart-product :product_info="obj" :discount="false"></chocomart-product>
+        <chocomart-product :size="1" :product_info="obj" :discount="false"></chocomart-product>
+        <chocomart-product :size="1" :product_info="obj" :discount="true"></chocomart-product>
+        <chocomart-product :size="2" :product_info="obj" :discount="false"></chocomart-product>
       </div>
     </div>
     <!-- GIRD START-->
@@ -65,7 +66,8 @@
           price: '250 000',
           rating: '4',
           rate_count: '13',
-          bonus: '2226'
+          bonus: '2226',
+          discountImg: ''
         }
       }
     }
