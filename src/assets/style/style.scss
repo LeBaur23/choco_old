@@ -1,14 +1,12 @@
 // components
 @import "./components/link-header";
 @import "./components/category-card";
+@import "components/product-card";
 
 
 // pages
 @import "./pages/main_page";
 
-
-// colors
-$default_color: #707070;
 
 // TYPOGRAPHY
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
@@ -33,11 +31,16 @@ $default_color: #707070;
 .text-capitalize {
   text-transform: capitalize !important;
 }
+.text-underline {
+  text-decoration: underline;
+}
+.text-throughline {
+  text-decoration: line-through;
+}
 
-// GLOBAL STYLE
+// GLOBAL STYLES
 
 // Grid
-
 .overflow-auto {
   overflow: auto;
 }
@@ -69,7 +72,6 @@ $default_color: #707070;
 
 
 // default
-
 html, body {
   background-color: #f6f6f6;
   margin: 0;
@@ -80,4 +82,3 @@ html, body {
   font-weight: 100;
   color: $default_color;
 }
-

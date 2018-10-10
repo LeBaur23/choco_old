@@ -12,9 +12,19 @@
     </div>
 
 
+    <!--TEST-->
+    <h2 class="text-center">TEST</h2>
+    <div class="container-fluid d-flex justify-content-center" style="background: #f6f6f6;">
+      <div class="row m-0" style="width: 1130px;">
+        <chocomart-product :product_info="obj"></chocomart-product>
+        <chocomart-product :size="1" :product_info="obj"></chocomart-product>
+        <chocomart-product :size="2"  :product_info="obj"></chocomart-product>
+      </div>
+    </div>
     <!-- GIRD START-->
     <h2 class="text-center">CHOCOMART GRID SYSTEM</h2>
     <div class="container-fluid" style="background-color: lightgray;border: 1px solid purple">
+    <div class="container-fluid" style="background-color: grey;border: 1px solid purple">
       <h4>div container-fluid</h4>
       <div class="row m-0" style="background-color: #ddd;border: 1px solid red">
         <div class="col-12">
@@ -62,63 +72,16 @@
   export default {
     data () {
       return {
-        datas: [
-          {
-            img: 'fridge.png',
-            title: 'БЫТОВАЯ ТЕХНИКА'
-          },
-          {
-            img: 'tablet.png',
-            title: 'СМАРТФОНЫ И ГАДЖЕТЫ'
-
-          },
-          {
-            img: 'printer.png',
-            title: 'КОМПЬЮТЕРЫ И ОФИС'
-
-          },
-          {
-            img: 'computer.png',
-            title: 'ТВ, АУДИО И ВИДЕО'
-
-          },
-          {
-            img: 'bedside-table.png',
-            title: 'ТОВАРЫ ДЛЯ ДОМА'
-
-          },
-          {
-            img: 'open-book.png',
-            title: 'КНИГИ'
-
-          },
-          {
-            img: 'baby-stroller.png',
-            title: 'ТОВАРЫ ДЛЯ ДЕТЕЙ'
-
-          },
-          {
-            img: 'lotion.png',
-            title: 'КРАСОТА И ЗДОРОВЬЕ'
-
-          },
-          {
-            img: 'palette.png',
-            title: 'ДОСУГ'
-
-          },
-          {
-            img: 'tent.png',
-            title: 'АКТИВНЫЙ ОТДЫХ'
-
-          },
-          {
-            img: 'oven.png',
-            title: 'ПРОМЫШЛЕННАЯ ТЕХНИКА'
-
-          }
-        ]
+        obj: {
+          img: '/static/iphone.png',
+          title: 'Смартфон Apple iPhone 6 32 Gb Gold',
+          price: '250 000',
+          rating: '4',
+          rate_count: '13',
+          bonus: '2226'
+        }
       }
     }
   }
+
 </script>

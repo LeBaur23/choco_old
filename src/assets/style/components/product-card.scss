@@ -1,0 +1,97 @@
+@import '../variables';
+
+.product-wrapper {
+  align-items: flex-start;
+  height: 312px;
+  width: 218px;
+  border: 1px solid $border_color;
+  border-radius: 4px;
+  padding: 10px 13px;
+  background: #ffffff;
+  margin: 5px;
+  .promotion-wrapper {
+    height: 45px;
+
+    &__bonus-value {
+      margin-left: 6px;
+      line-height: 1.2;
+      font-size: $bonus_size;
+    }
+  }
+  .row {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    .image-wrapper {
+      height: 160px;
+      width: 160px;
+      &--big {
+        height: 220px;
+        width: 200px;
+      }
+      &--small {
+        height: 105px;
+        width: 120px;
+      }
+    }
+    .description-wrapper {
+      height: 87px;
+      width: 150px;
+      .text-wrapper {
+        height: 35px;
+        font-size: $default_size;
+        line-height: 1.1;
+      }
+      .rating-wrapper {
+        height: 13px;
+        .stars-wrapper {
+          position: relative;
+          display: flex;
+          align-items: center;
+          width: 70px;
+          background: #e9e9e9;
+          &__percentage {
+            position: absolute;
+            background: $choco_yellow;
+          }
+          &__image {
+            position: initial;
+            z-index: 2;
+            height: 100%;
+            width: 100%;
+          }
+        }
+        .rating-count-wrapper {
+          width: 75px;
+          font-size: $bonus_size;
+          color: #c2c2c2;
+        }
+      }
+      .price-wrapper {
+        height: 37px;
+        font-size: $price_size;
+      }
+    }
+  }
+}
+.product-wrapper--big {
+  width: 446px;
+  align-items: flex-start !important;
+}
+.product-wrapper--small {
+  flex-direction: row-reverse !important;
+  justify-content: space-between;
+  height: 151px;
+  width: 446px;
+
+  .promotion-wrapper--small {
+    align-items: flex-start !important;
+    height: 100%;
+    width: 100px !important;
+  }
+
+  .product-wrapper__row--small {
+    margin-left: 10px;
+    height: 100%;
+  }
+}

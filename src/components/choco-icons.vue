@@ -14,7 +14,7 @@
     data() {
       return {
         svg_tags: '',
-        icon_url: '',
+        icon_url: ''
       }
     },
     beforeMount () {
