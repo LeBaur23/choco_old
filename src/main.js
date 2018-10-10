@@ -12,10 +12,12 @@ import './assets/style/style.scss'
 import LINK_HEADER from './components/link-header.vue'
 import HEADER from './components/header.vue'
 import CHOCO_ICONS from './components/choco-icons.vue'
+import CATEGORY_CARD from  './components/category-card.vue'
 import PRODUCT from './components/product-card'
 Vue.component('chocomart-link-header', LINK_HEADER)
 Vue.component('chocomart-header', HEADER)
 Vue.component('chocomart-icon', CHOCO_ICONS)
+Vue.component('category-card', CATEGORY_CARD)
 Vue.component('chocomart-product', PRODUCT)
 
 Vue.config.productionTip = false
