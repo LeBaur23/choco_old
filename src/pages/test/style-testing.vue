@@ -11,8 +11,6 @@
       </div>
     </div>
     <!-- GIRD START-->
-    <h2 class="text-center">CHOCOMART GRID SYSTEM</h2>
-    <div class="container-fluid" style="background-color: grey;border: 1px solid purple">
     <h2 class="text-center">TEST</h2>
     <div class="container-fluid">
       <div class="row m-0 justify-content-center">
@@ -23,17 +21,6 @@
             <category-card v-for="i in datas" :icon="i.img" :title="i.title"></category-card>
             <category-card :discount="true"></category-card>
         </div>
-      </div>
-    </div>
-
-
-    <!--TEST-->
-    <h2 class="text-center">TEST</h2>
-    <div class="container-fluid d-flex justify-content-center" style="background: #f6f6f6;">
-      <div class="row m-0" style="width: 1130px;">
-        <chocomart-product :product_info="obj"></chocomart-product>
-        <chocomart-product :size="1" :product_info="obj"></chocomart-product>
-        <chocomart-product :size="2"  :product_info="obj"></chocomart-product>
       </div>
     </div>
     <!-- GIRD START-->
