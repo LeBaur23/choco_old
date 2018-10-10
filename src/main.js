@@ -7,6 +7,7 @@ import router from './router'
 // styles
 import 'bootstrap-4-grid/css/grid.css'
 import './assets/style/style.scss'
+import 'styles/variables.scss'
 
 // components
 import LINK_HEADER from './components/link-header.vue'

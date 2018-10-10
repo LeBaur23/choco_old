@@ -1,3 +1,4 @@
+@import "../variables";
 .category-card {
   width: 180px;
   height: 180px;
@@ -5,7 +6,13 @@
   border-radius: 4px;
   position: relative;
   background-color: white;
-  border: solid 1px #ebebeb;
+  border: solid 1px $border_color;
+  &-discount {
+    width: 400px;
+    height: 200px;
+    background-color: $white_color;
+
+  }
   &-info {
     width: 129px;
   }
@@ -23,6 +30,6 @@
     height: 4px;
     bottom: 0;
     border-radius: 10px;
-    background-color: #fb443f;
+    background-color: $brand_darker;
   }
 }
