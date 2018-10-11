@@ -1,16 +1,19 @@
 <template>
   <div class="choco-icon">
-    <div class="choco-icon__svg" :style="{'color': color,'fontSize': font_size }" v-html="svg_tags">
+    <div class="choco-icon-svg-wrapper">
+      <div class="choco-icon__svg" :class="{category : category !== undefined}" :style="{'color': color,'fontSize': font_size }" v-html="svg_tags">
+      </div>
+      <div v-if="counted !== undefined" class="choco-icon_counter" :class="counted">
+        <h4 class="m-0">{{count}}</h4>
+      </div>
     </div>
-    <div v-if="counted === true" class="choco-icon_counter">
-      <h4 class="m-0">10</h4>
-    </div>
+    <slot></slot>
   </div>
 </template>
 <script>
   import icons from '../choco-icons'
   export default {
-    props: ['color', 'font_size', 'icon', 'counted'],
+    props: ['color', 'font_size', 'icon', 'counted', 'width', 'count', 'category'],
     data() {
       return {
         svg_tags: '',
@@ -18,8 +21,15 @@
       }
     },
     beforeMount () {
-      this.icon_url = icons
-      let path_to_file = this.icon_url[this.icon]
+      let path_to_file = ''
+      if (this.category === undefined) {
+        this.icon_url = icons
+        path_to_file = this.icon_url[this.icon]
+      }
+      else {
+        path_to_file = this.category
+      }
+      console.log(path_to_file)
       let svg_icon = ''
       function readTextFile(file)
       {

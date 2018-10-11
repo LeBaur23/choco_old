@@ -1,0 +1,42 @@
+.input-text {
+  position: relative;
+    &:before {
+    content : "";
+    position: absolute;
+    left    : 0;
+    bottom  : 0;
+    height  : 1px;
+    width   : 50%;  /* or 100px */
+    border-bottom: 1px solid $brand_color;
+  }
+  input {
+    width: 640px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid $input_border;
+    padding: 0;
+    position: relative;
+    font-size: 16px;
+    padding-right: 30px;
+    color: $dark_color;
+
+    &:focus {
+      outline: none;
+    }
+    &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $input_border;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: $input_border;
+    }
+    &::-ms-input-placeholder { /* Microsoft Edge */
+      color: $input_border;
+    }
+  }
+  .input-icon {
+    top: 9px;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+  }
+}

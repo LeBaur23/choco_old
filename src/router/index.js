@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import MainPage from '@/pages/main_page.vue'
 // Test
 import Test from '@/pages/test/style-testing.vue'
+import BaukTest from '@/pages/test/bauka-test.vue'
 
 Vue.use(Router)
 
@@ -19,6 +20,11 @@ export default new Router({
       path: '/test',
       name: 'Test',
       component: Test
+    },
+    {
+      path: '/bauka',
+      name: 'Bauka',
+      component: BaukTest
     }
   ]
 })

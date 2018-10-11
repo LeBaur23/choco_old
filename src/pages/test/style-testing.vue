@@ -14,7 +14,7 @@
     <h2 class="text-center">TEST</h2>
     <div class="container-fluid">
       <div class="row m-0 justify-content-center">
-        <chocomart-icon :icon="'heart'" :font_size="'22px'" :counted="true"></chocomart-icon>
+        <chocomart-icon :icon="'heart'" :font_size="'22px'" :counted="'bottom'" :count="'20'"></chocomart-icon>
       </div>
       <div class="row m-0 justify-content-center">
         <div id="CategoryProducts" >
