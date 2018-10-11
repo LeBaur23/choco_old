@@ -31,7 +31,26 @@
     <div v-if="discount" class="product-wrapper__discount h-100 w-100">
       <img :src="product_info.discountImg" class="m-0 p-0 h-100 w-100">
     </div>
-    <div class="product-wrapper__actions actions-wrapper w-100"></div>
+    <div class="product-wrapper__actions actions-wrapper w-100 flex-column justify-content-center m-0" :class="product_size === true || product_size === false ? 'actions-wrapper--modified' : ''">
+      <div class="actions-wrapper__action action-wrapper w-100 h-50 d-flex align-items-center justify-content-around">
+        <button class="action-wrapper__buttons buttons-wrapper buttons-wrapper--bordered d-flex align-items-center p-0">
+          <span class="button-plus">+</span>
+          <chocomart-icon :icon="'cart'" :font_size="'24px'"></chocomart-icon>
+        </button>
+        <button class="buttons-wrapper__input-action input-action-wrapper d-flex align-items-center justify-content-center p-0 input-action--buy">
+          Купить в один клик
+        </button>
+      </div>
+      <div class="actions-wrapper__action action-wrapper w-100 h-50 d-flex align-items-center justify-content-around" :class="product_size === true || product_size === false ? 'action-wrapper--modified' : ''">
+        <div class="action-wrapper__buttons buttons-wrapper d-flex align-items-center justify-content-around p-0">
+          <chocomart-icon :icon="'growth'" :font_size="'18px'"></chocomart-icon>
+          <chocomart-icon :icon="'heart'" :font_size="'18px'"></chocomart-icon>
+        </div>
+        <button class="buttons-wrapper__input-action input-action-wrapper d-flex align-items-center justify-content-center p-0 input-action--focus">
+          Следить за ценой
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 

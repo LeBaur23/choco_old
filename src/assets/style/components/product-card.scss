@@ -78,7 +78,44 @@
     border: 1px solid $border_color;
     border-top: solid 1px #ebebeb;
     box-sizing: content-box;
-    margin: 0;
+    &--modified {
+      flex-direction: row !important;
+      align-items: center;
+    }
+    .action-wrapper {
+      &--modified {
+        flex-direction: row-reverse !important;
+      }
+      .buttons-wrapper {
+        width: 54px;
+        height: 30px;
+        background: #fff;
+      }
+      .buttons-wrapper--bordered {
+        justify-content: center;
+        border: solid 1px $brand_color;
+        border-radius: 5px;
+        .button-plus {
+          color: $brand_color;
+          font-size: 24px;
+        }
+      }
+      .input-action-wrapper {
+        height: 30px;
+        width: 144px;
+        font-size: $category_size;
+        color: #fff;
+        border-radius: 5px;
+      }
+      .input-action--buy {
+        background: $brand_color;
+        border: 1px solid $brand_color;
+      }
+      .input-action--focus {
+        background: $choco_yellow;
+        border: 1px solid $choco_yellow;
+      }
+    }
   }
   &:hover {
     z-index: 2;
@@ -90,11 +127,11 @@
     }
     .actions-wrapper {
       position: absolute;
-      border-radius: 0 0 4px 4px;
       bottom: -100px;
       right: 0;
       left: -1px;
-      display: block;
+      display: flex;
+      border-radius: 0 0 4px 4px;
       box-shadow: 0 0 20px 0 rgba(138, 138, 138, 0.16);
     }
   }

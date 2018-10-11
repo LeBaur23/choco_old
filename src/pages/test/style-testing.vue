@@ -5,8 +5,8 @@
     <div class="d-flex justify-content-center" style="background: #f6f6f6;">
       <div class="row m-0" style="width: 1130px; position: relative;">
         <chocomart-product :product_info="obj" :discount="false"></chocomart-product>
-        <chocomart-product :size="1" :product_info="obj" :discount="false"></chocomart-product>
-        <chocomart-product :size="2" :product_info="obj" :discount="false"></chocomart-product>
+        <!--<chocomart-product :size="1" :product_info="obj" :discount="false"></chocomart-product>-->
+        <!--<chocomart-product :size="2" :product_info="obj" :discount="false"></chocomart-product>-->
       </div>
     </div>
     <!-- GIRD START-->
