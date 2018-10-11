@@ -31,7 +31,7 @@
     <div v-if="discount" class="product-wrapper__discount h-100 w-100">
       <img :src="product_info.discountImg" class="m-0 p-0 h-100 w-100">
     </div>
-    <div class="product-wrapper__actions actions-wrapper w-100 flex-column justify-content-center m-0" :class="product_size === true || product_size === false ? 'actions-wrapper--modified' : ''">
+    <div class="product-wrapper__actions actions-wrapper d-none w-100 flex-column justify-content-center m-0" :class="product_size === true || product_size === false ? 'actions-wrapper--modified' : ''">
       <div class="actions-wrapper__action action-wrapper w-100 h-50 d-flex align-items-center justify-content-around">
         <button class="action-wrapper__buttons buttons-wrapper buttons-wrapper--bordered d-flex align-items-center p-0">
           <span class="button-plus">+</span>
@@ -40,6 +40,12 @@
         <button class="buttons-wrapper__input-action input-action-wrapper d-flex align-items-center justify-content-center p-0 input-action--buy">
           Купить в один клик
         </button>
+        <!--<div class="buttons-wrapper__input-action input-action-wrapper input-action&#45;&#45;input-wrapper d-flex">-->
+          <!--<input type="tel" class="input-action&#45;&#45;input-wrapper input-wrapper__input input-wrapper__input&#45;&#45;buy h-100" placeholder="+7 (777) 85 88 555">-->
+          <!--<button class="h-100 input-action-wrapper__button input-action-wrapper__button&#45;&#45;buy p-0 d-flex justify-content-center align-items-center">-->
+            <!--<chocomart-icon :icon="'arrow-thin'" :font_size="'18px'"></chocomart-icon>-->
+          <!--</button>-->
+        <!--</div>-->
       </div>
       <div class="actions-wrapper__action action-wrapper w-100 h-50 d-flex align-items-center justify-content-around" :class="product_size === true || product_size === false ? 'action-wrapper--modified' : ''">
         <div class="action-wrapper__buttons buttons-wrapper d-flex align-items-center justify-content-around p-0">
@@ -49,6 +55,12 @@
         <button class="buttons-wrapper__input-action input-action-wrapper d-flex align-items-center justify-content-center p-0 input-action--focus">
           Следить за ценой
         </button>
+        <!--<div class="buttons-wrapper__input-action input-action-wrapper input-action&#45;&#45;input-wrapper input-action&#45;&#45;input-focus d-flex">-->
+          <!--<input type="tel" class="input-action&#45;&#45;input-wrapper input-wrapper__input input-wrapper__input&#45;&#45;focus h-100" placeholder="+7 (777) 85 88 555">-->
+          <!--<button class="h-100 input-action-wrapper__button input-action-wrapper__button&#45;&#45;focus p-0">-->
+            <!--<chocomart-icon :icon="'arrow-thin'" :font_size="'18px'"></chocomart-icon>-->
+          <!--</button>-->
+        <!--</div>-->
       </div>
     </div>
   </div>

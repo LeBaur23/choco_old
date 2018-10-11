@@ -73,7 +73,6 @@
   }
   .actions-wrapper {
     background: #fff;
-    display: none;
     height: 100px;
     border: 1px solid $border_color;
     border-top: solid 1px #ebebeb;
@@ -90,6 +89,7 @@
         width: 54px;
         height: 30px;
         background: #fff;
+        cursor: pointer;
       }
       .buttons-wrapper--bordered {
         justify-content: center;
@@ -106,14 +106,52 @@
         font-size: $category_size;
         color: #fff;
         border-radius: 5px;
+        &__button {
+          width: 30px;
+          border: none;
+          border-radius: 0 3px 3px 0;
+          cursor: pointer;
+          &--buy {
+            background: $brand_color;
+          }
+          &--focus {
+            background: $choco_yellow;
+          }
+        }
+      }
+      .input-action--input-wrapper {
+        border: 1px solid $brand_color;
+        .input-wrapper__input {
+          width: 114px;
+          border: 0;
+          box-sizing:border-box;
+          border-radius: 5px 0 0 5px;
+          padding: 0 5px;
+          font-size: $bonus_size;
+          color: $default_color;
+          &:focus {
+            outline: none;
+          }
+          &--buy {
+            border-right: 1px solid $brand_color;
+          }
+          &--focus{
+            border-right: 1px solid $choco_yellow;
+          }
+        }
+      }
+      .input-action--input-focus {
+        border: 1px solid $choco_yellow;
       }
       .input-action--buy {
         background: $brand_color;
         border: 1px solid $brand_color;
+        cursor: pointer;
       }
       .input-action--focus {
         background: $choco_yellow;
         border: 1px solid $choco_yellow;
+        cursor: pointer;
       }
     }
   }
@@ -130,7 +168,7 @@
       bottom: -100px;
       right: 0;
       left: -1px;
-      display: flex;
+      display: flex !important;
       border-radius: 0 0 4px 4px;
       box-shadow: 0 0 20px 0 rgba(138, 138, 138, 0.16);
     }
