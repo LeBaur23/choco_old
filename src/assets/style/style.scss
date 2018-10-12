@@ -1,8 +1,11 @@
 // components
-@import "./components/link-header";
-@import "./components/category-card";
+@import "variables";
+@import "components/link-header";
 @import "components/product-card";
 @import "components/choco-icons";
+@import "components/category-card";
+@import "components/header";
+@import "components/input-text";
 
 
 // pages
@@ -68,6 +71,7 @@
     width: 1180px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
 

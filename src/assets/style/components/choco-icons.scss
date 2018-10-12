@@ -3,22 +3,43 @@
   position: relative;
   &_counter {
     position: absolute;
-    top:-5px;
-    right: -5px;
-    background-color: #ff5d5d;
-    color: white;
+    color: $white_color;
     padding: 2px;
     border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    text-align: center;
     h4 {
       font-size: 12px;
     }
+  }
+  .top{
+    top:-5px;
+    right: -5px;
+    background-color: $brand_darker;
+  }
+  .bottom {
+    bottom: -2px;
+    right: -8px;
+    background-color: $choco_yellow;
+  }
+  &-svg-wrapper {
+    position: relative;
   }
   &__svg {
     display: inline-block;
     svg{
       width: 1em;
       path{
-        fill: currentcolor
+        fill: currentcolor;
+      }
+    }
+  }
+  .category {
+    svg {
+      width: auto !important;
+      path {
+        transition: 0.4s;
       }
     }
   }
