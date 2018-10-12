@@ -7,7 +7,11 @@ var icons = {
   'cart': '/static/icons/cart.svg',
   'growth': '/static/icons/growth.svg',
   'arrow-thin': '/static/icons/arrow_thin.svg',
-  'arrow-bold': '/static/icons/arrow-bold.svg'
+  'arrow-bold': '/static/icons/arrow-bold.svg',
+  'chat': '/static/icons/chat.svg',
+  'credit-card': '/static/icons/credit-card.svg',
+  'return': '/static/icons/return.svg',
+  'shipping': '/static/icons/shipping.svg'
 }
 
 export default icons
