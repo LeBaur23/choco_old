@@ -90,14 +90,19 @@
         height: 30px;
         background: #fff;
         cursor: pointer;
-      }
-      .buttons-wrapper--bordered {
-        justify-content: center;
-        border: solid 1px $brand_color;
-        border-radius: 5px;
-        .button-plus {
-          color: $brand_color;
-          font-size: 24px;
+        &--bordered {
+          justify-content: center;
+          border: solid 1px $brand_color;
+          border-radius: 5px;
+          .button-plus {
+            color: $brand_color;
+            font-size: 24px;
+          }
+        }
+        &--bought {
+          justify-content: center;
+          border: solid 1px $default_color;
+          border-radius: 5px;
         }
       }
       .input-action-wrapper {

@@ -33,9 +33,12 @@
     </div>
     <div class="product-wrapper__actions actions-wrapper d-none w-100 flex-column justify-content-center m-0" :class="product_size === true || product_size === false ? 'actions-wrapper--modified' : ''">
       <div class="actions-wrapper__action action-wrapper w-100 h-50 d-flex align-items-center justify-content-around">
-        <button class="action-wrapper__buttons buttons-wrapper buttons-wrapper--bordered d-flex align-items-center p-0">
+        <button v-if="add_to_cart === false" v-on:click="add_to_cart = true" class="action-wrapper__buttons buttons-wrapper buttons-wrapper--bordered d-flex align-items-center p-0">
           <span class="button-plus">+</span>
           <chocomart-icon :icon="'cart'" :font_size="'24px'"></chocomart-icon>
+        </button>
+        <button v-if="add_to_cart === true" class="action-wrapper__buttons buttons-wrapper d-flex align-items-center p-0 buttons-wrapper--bought">
+          <chocomart-icon :color="'#707070'" :icon="'cart'" :font_size="'24px'"></chocomart-icon>
         </button>
         <button v-if="buy_switch === false" v-on:click="buy_switch = true" class="buttons-wrapper__input-action input-action-wrapper d-flex align-items-center justify-content-center p-0 input-action--buy">
           Купить в один клик
@@ -81,7 +84,8 @@ export default {
       product_size: '',
       rating_score: 0,
       focus_switch: false,
-      buy_switch: false
+      buy_switch: false,
+      add_to_cart: false
     }
   },
   components: {TheMask},

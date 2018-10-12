@@ -63,8 +63,8 @@
           img: '/static/iphone.png',
           title: 'Смартфон Apple iPhone 6 32 Gb Gold',
           price: '250 000',
-          rating: '2.5',
-          rate_count: '13',
+          rating: '4.5',
+          rate_count: '15',
           bonus: '2226',
           discountImg: ''
         }
