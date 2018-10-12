@@ -90,6 +90,12 @@
         height: 30px;
         background: #fff;
         cursor: pointer;
+        &__arrow {
+          height: 18px;
+          width: 18px;
+          border-radius: 50%;
+          background: $brand_color;
+        }
         &--bordered {
           justify-content: center;
           border: solid 1px $brand_color;

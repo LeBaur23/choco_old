@@ -2,7 +2,7 @@
   <div class="product-wrapper d-flex flex-column align-items-center" :class="product_size === true && discount === false ? 'product-wrapper--big' : (product_size === true && discount === true ? 'discount' : (product_size === false ? 'product-wrapper--small' : ''))">
     <div class="row product-wrapper__row w-100 m-0">
       <div v-if="discount === false" class="product-wrapper__promotion promotion-wrapper w-100 d-flex justify-content-end align-items-center" :class="product_size === false ? 'promotion-wrapper--small' : ''">
-        <chocomart-icon :icon="'bonus'" :font_size="'25px'"></chocomart-icon>
+        <chocomart-icon :color="'#fdcc05'" :icon="'bonus'" :font_size="'25px'"></chocomart-icon>
         <div class="promotion-wrapper__bonus-value">Бонус <br><span class="font-weight-bold">{{product_info.bonus}} ₸</span></div>
       </div>
       <div v-if="discount === false" class="row m-0 justify-content-center align-items-center" :class="product_size === false ? 'product-wrapper__row--small' : ''">
@@ -35,10 +35,13 @@
       <div class="actions-wrapper__action action-wrapper w-100 h-50 d-flex align-items-center justify-content-around">
         <button v-if="add_to_cart === false" v-on:click="add_to_cart = true" class="action-wrapper__buttons buttons-wrapper buttons-wrapper--bordered d-flex align-items-center p-0">
           <span class="button-plus">+</span>
-          <chocomart-icon :icon="'cart'" :font_size="'24px'"></chocomart-icon>
+          <chocomart-icon :color="'#ff5d5d'" :icon="'cart'" :font_size="'24px'"></chocomart-icon>
         </button>
-        <button v-if="add_to_cart === true" class="action-wrapper__buttons buttons-wrapper d-flex align-items-center p-0 buttons-wrapper--bought">
+        <button v-if="add_to_cart === true" class="action-wrapper__buttons buttons-wrapper d-flex align-items-center justify-content-around p-0 buttons-wrapper--bought">
           <chocomart-icon :color="'#707070'" :icon="'cart'" :font_size="'24px'"></chocomart-icon>
+          <div class="buttons-wrapper__arrow d-flex justify-content-center align-items-center p-0 m-0">
+            <chocomart-icon :color="'#ffffff'" :icon="'arrow-bold'" :font_size="'10px'"></chocomart-icon>
+          </div>
         </button>
         <button v-if="buy_switch === false" v-on:click="buy_switch = true" class="buttons-wrapper__input-action input-action-wrapper d-flex align-items-center justify-content-center p-0 input-action--buy">
           Купить в один клик
