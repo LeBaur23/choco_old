@@ -41,7 +41,7 @@
           Купить в один клик
         </button>
         <div v-if="buy_switch" class="buttons-wrapper__input-action input-action-wrapper input-action--input-wrapper d-flex">
-          <input type="tel" id="input-buy-onclick" name="input-buy-onclick" class="input-action--input-wrapper input-wrapper__input input-wrapper__input--buy h-100" placeholder="+7 (777) 85 88 555">
+          <the-mask mask="+7 (###) ### ## ##" masked="true" type="tel" id="input-buy-onclick" name="input-buy-onclick" class="input-action--input-wrapper input-wrapper__input input-wrapper__input--buy h-100" placeholder="+7 (xxx) xxx xx xx"></the-mask>
           <button class="h-100 input-action-wrapper__button input-action-wrapper__button--buy p-0 d-flex justify-content-center align-items-center">
             <chocomart-icon :icon="'arrow-thin'" :font_size="'18px'"></chocomart-icon>
           </button>
@@ -56,7 +56,7 @@
           Следить за ценой
         </button>
           <div v-if="focus_switch" class="buttons-wrapper__input-action input-action-wrapper input-action--input-wrapper input-action--input-focus d-flex">
-          <input type="tel" id="input-focus-onprice" name="input-focus-onprice" class="input-action--input-wrapper input-wrapper__input input-wrapper__input--focus h-100" placeholder="+7 (777) 85 88 555">
+          <the-mask mask="+7 (###) ### ## ##" masked="true" type="tel" id="input-focus-onprice" name="input-focus-onprice" class="input-action--input-wrapper input-wrapper__input input-wrapper__input--buy h-100" placeholder="+7 (xxx) xxx xx xx"></the-mask>
           <button class="h-100 input-action-wrapper__button input-action-wrapper__button--focus p-0">
             <chocomart-icon :icon="'arrow-thin'" :font_size="'18px'"></chocomart-icon>
           </button>
@@ -67,6 +67,7 @@
 </template>
 
 <script>
+import {TheMask} from 'vue-the-mask'
 export default {
   props: ['size', 'product_info', 'discount'],
   data () {
@@ -77,6 +78,7 @@ export default {
       buy_switch: false
     }
   },
+  components: {TheMask},
   methods: {
     click: function () {
       console.log('yeah')
