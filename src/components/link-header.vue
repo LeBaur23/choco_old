@@ -31,7 +31,17 @@
           </div>
         </div>
       </div>
-      <div class="content-wrapper__numbers numbers-wrapper"></div>
+      <div class="content-wrapper__numbers numbers-wrapper h-100 d-flex">
+        <div class="numbers-wrapper__phone phone-wrapper h-100 d-flex align-items-center">
+          <chocomart-icon :color="'#fb443f'" :icon="'phone-call'" :font_size="'20px'"></chocomart-icon>
+          <span style="font-weight: bold; margin-left: 10px;">8 (727) 221-00-99</span>
+        </div>
+        <div class="numbers-wrapper__phone phone-wrapper h-100 d-flex align-items-center justify-content-around">
+          <chocomart-icon :color="'#fb443f'" :icon="'phone-call'" :font_size="'20px'"></chocomart-icon>
+          <span style="font-weight: bold; margin:0 10px;">8 (800) 080-55-95</span>
+          <span class="text-uppercase" style=" font-size: 12px;">бесплатно</span>
+        </div>
+      </div>
       <div class="content-wrapper__promotion promotion-wrapper"></div>
     </div>
   </div>

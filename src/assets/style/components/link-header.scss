@@ -1,5 +1,6 @@
 .link-header-wrapper {
   height: 40px;
+  background: #fff;
   .content-wrapper {
     width: 1280px;
     .feedback-wrapper {
@@ -52,6 +53,14 @@
             }
           }
         }
+      }
+    }
+    .numbers-wrapper {
+      padding: 0 65px;
+      .phone-wrapper {
+        margin-right: 30px;
+        font-size: $category_size;
+        color: $default_color;
       }
     }
   }

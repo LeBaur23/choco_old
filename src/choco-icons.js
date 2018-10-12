@@ -11,7 +11,8 @@ var icons = {
   'chat': '/static/icons/chat.svg',
   'credit-card': '/static/icons/credit-card.svg',
   'return': '/static/icons/return.svg',
-  'shipping': '/static/icons/shipping.svg'
+  'shipping': '/static/icons/shipping.svg',
+  'phone-call': '/static/icons/phone-call.svg'
 }
 
 export default icons
