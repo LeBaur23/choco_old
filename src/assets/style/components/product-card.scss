@@ -106,6 +106,10 @@
         font-size: $category_size;
         color: #fff;
         border-radius: 5px;
+        &__answer {
+          font-size: $bonus_size;
+          color: $default_color;
+        }
         &__button {
           width: 26px;
           border: none;

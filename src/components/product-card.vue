@@ -40,9 +40,12 @@
         <button v-if="buy_switch === false" v-on:click="buy_switch = true" class="buttons-wrapper__input-action input-action-wrapper d-flex align-items-center justify-content-center p-0 input-action--buy">
           Купить в один клик
         </button>
-        <div v-if="buy_switch" class="buttons-wrapper__input-action input-action-wrapper input-action--input-wrapper d-flex">
+        <div v-if="buy_switch === 'answer'" class="buttons-wrapper_input-action input-action-wrapper text-center input-action--input-wrapper input-action-wrapper__answer d-flex align-items-center justify-content-center">
+          Мы вам сообщим!
+        </div>
+        <div v-if="buy_switch === true" class="buttons-wrapper__input-action input-action-wrapper input-action--input-wrapper d-flex">
           <the-mask mask="+7 (###) ### ## ##" masked="true" type="tel" id="input-buy-onclick" name="input-buy-onclick" class="input-action--input-wrapper input-wrapper__input input-wrapper__input--buy h-100" placeholder="+7 (xxx) xxx xx xx"></the-mask>
-          <button class="h-100 input-action-wrapper__button input-action-wrapper__button--buy p-0 d-flex justify-content-center align-items-center">
+          <button v-on:click="buy_switch = 'answer'" class="h-100 input-action-wrapper__button input-action-wrapper__button--buy p-0 d-flex justify-content-center align-items-center">
             <chocomart-icon :icon="'arrow-thin'" :font_size="'18px'"></chocomart-icon>
           </button>
         </div>
@@ -55,9 +58,12 @@
         <button v-if="focus_switch === false" v-on:click="focus_switch = true" class="buttons-wrapper__input-action input-action-wrapper d-flex align-items-center justify-content-center p-0 input-action--focus">
           Следить за ценой
         </button>
-          <div v-if="focus_switch" class="buttons-wrapper__input-action input-action-wrapper input-action--input-wrapper input-action--input-focus d-flex">
-          <the-mask mask="+7 (###) ### ## ##" masked="true" type="tel" id="input-focus-onprice" name="input-focus-onprice" class="input-action--input-wrapper input-wrapper__input input-wrapper__input--buy h-100" placeholder="+7 (xxx) xxx xx xx"></the-mask>
-          <button class="h-100 input-action-wrapper__button input-action-wrapper__button--focus p-0">
+        <div v-if="focus_switch === 'answer'" class="buttons-wrapper_input-action input-action-wrapper text-center input-action--input-focus input-action-wrapper__answer d-flex align-items-center justify-content-center">
+          Мы вам сообщим!
+        </div>
+        <div v-if="focus_switch === true" class="buttons-wrapper__input-action input-action-wrapper input-action--input-wrapper input-action--input-focus d-flex">
+          <the-mask mask="+7 (###) ### ## ##" masked="true" type="tel" id="input-focus-onprice" name="input-focus-onprice" class="input-action--input-wrapper input-wrapper__input input-wrapper__input--focus h-100" placeholder="+7 (xxx) xxx xx xx"></the-mask>
+          <button v-on:click="focus_switch = 'answer'" class="h-100 input-action-wrapper__button input-action-wrapper__button--focus p-0">
             <chocomart-icon :icon="'arrow-thin'" :font_size="'18px'"></chocomart-icon>
           </button>
         </div>
