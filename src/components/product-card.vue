@@ -37,30 +37,30 @@
           <span class="button-plus">+</span>
           <chocomart-icon :icon="'cart'" :font_size="'24px'"></chocomart-icon>
         </button>
-        <button class="buttons-wrapper__input-action input-action-wrapper d-flex align-items-center justify-content-center p-0 input-action--buy">
+        <button v-if="buy_switch === false" v-on:click="buy_switch = true" class="buttons-wrapper__input-action input-action-wrapper d-flex align-items-center justify-content-center p-0 input-action--buy">
           Купить в один клик
         </button>
-        <!--<div class="buttons-wrapper__input-action input-action-wrapper input-action&#45;&#45;input-wrapper d-flex">-->
-          <!--<input type="tel" class="input-action&#45;&#45;input-wrapper input-wrapper__input input-wrapper__input&#45;&#45;buy h-100" placeholder="+7 (777) 85 88 555">-->
-          <!--<button class="h-100 input-action-wrapper__button input-action-wrapper__button&#45;&#45;buy p-0 d-flex justify-content-center align-items-center">-->
-            <!--<chocomart-icon :icon="'arrow-thin'" :font_size="'18px'"></chocomart-icon>-->
-          <!--</button>-->
-        <!--</div>-->
+        <div v-if="buy_switch" class="buttons-wrapper__input-action input-action-wrapper input-action--input-wrapper d-flex">
+          <input type="tel" id="input-buy-onclick" name="input-buy-onclick" class="input-action--input-wrapper input-wrapper__input input-wrapper__input--buy h-100" placeholder="+7 (777) 85 88 555">
+          <button class="h-100 input-action-wrapper__button input-action-wrapper__button--buy p-0 d-flex justify-content-center align-items-center">
+            <chocomart-icon :icon="'arrow-thin'" :font_size="'18px'"></chocomart-icon>
+          </button>
+        </div>
       </div>
       <div class="actions-wrapper__action action-wrapper w-100 h-50 d-flex align-items-center justify-content-around" :class="product_size === true || product_size === false ? 'action-wrapper--modified' : ''">
         <div class="action-wrapper__buttons buttons-wrapper d-flex align-items-center justify-content-around p-0">
           <chocomart-icon :icon="'growth'" :font_size="'18px'"></chocomart-icon>
           <chocomart-icon :icon="'heart'" :font_size="'18px'"></chocomart-icon>
         </div>
-        <button class="buttons-wrapper__input-action input-action-wrapper d-flex align-items-center justify-content-center p-0 input-action--focus">
+        <button v-if="focus_switch === false" v-on:click="focus_switch = true" class="buttons-wrapper__input-action input-action-wrapper d-flex align-items-center justify-content-center p-0 input-action--focus">
           Следить за ценой
         </button>
-        <!--<div class="buttons-wrapper__input-action input-action-wrapper input-action&#45;&#45;input-wrapper input-action&#45;&#45;input-focus d-flex">-->
-          <!--<input type="tel" class="input-action&#45;&#45;input-wrapper input-wrapper__input input-wrapper__input&#45;&#45;focus h-100" placeholder="+7 (777) 85 88 555">-->
-          <!--<button class="h-100 input-action-wrapper__button input-action-wrapper__button&#45;&#45;focus p-0">-->
-            <!--<chocomart-icon :icon="'arrow-thin'" :font_size="'18px'"></chocomart-icon>-->
-          <!--</button>-->
-        <!--</div>-->
+          <div v-if="focus_switch" class="buttons-wrapper__input-action input-action-wrapper input-action--input-wrapper input-action--input-focus d-flex">
+          <input type="tel" id="input-focus-onprice" name="input-focus-onprice" class="input-action--input-wrapper input-wrapper__input input-wrapper__input--focus h-100" placeholder="+7 (777) 85 88 555">
+          <button class="h-100 input-action-wrapper__button input-action-wrapper__button--focus p-0">
+            <chocomart-icon :icon="'arrow-thin'" :font_size="'18px'"></chocomart-icon>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -72,7 +72,14 @@ export default {
   data () {
     return {
       product_size: '',
-      rating_score: 0
+      rating_score: 0,
+      focus_switch: false,
+      buy_switch: false
+    }
+  },
+  methods: {
+    click: function () {
+      console.log('yeah')
     }
   },
   beforeMount () {

@@ -102,15 +102,16 @@
       }
       .input-action-wrapper {
         height: 30px;
-        width: 144px;
+        width: 140px;
         font-size: $category_size;
         color: #fff;
         border-radius: 5px;
         &__button {
-          width: 30px;
+          width: 26px;
           border: none;
           border-radius: 0 3px 3px 0;
           cursor: pointer;
+          outline: none;
           &--buy {
             background: $brand_color;
           }
