@@ -4,6 +4,8 @@
   .content-wrapper {
     width: 1280px;
     .feedback-wrapper {
+      float: left;
+      width: 205px;
       position: relative;
       font-size: $default_size;
       color: $brand_darker;
@@ -35,6 +37,11 @@
         background: #ffffff;
         padding: 10px 0;
         .type-wrapper {
+          a {
+            font-size: $default_size;
+            text-decoration: none;
+            color: $default_color;
+          }
           &__icon {
             width: 35px;
             margin: 0 10px;
@@ -42,8 +49,10 @@
           height: 45px;
           color: $default_color;
           &:hover {
-            color: $brand_darker;
             cursor: pointer;
+            a {
+              color: $brand_darker !important;
+            }
             .type-wrapper__icon {
               svg {
                 path{
@@ -56,10 +65,31 @@
       }
     }
     .numbers-wrapper {
+      float: left;
+      width: 555px;
       padding: 0 65px;
       .phone-wrapper {
         margin-right: 30px;
         font-size: $category_size;
+        color: $default_color;
+      }
+    }
+    .promotion-wrapper {
+      float: right;
+      height: 40px;
+      width: 305px;
+      padding-right: 55px;
+      &__p-value {
+        display: block;
+        color: $brand_darker;
+        font-size: $h3_size;
+        margin: 0 10px;
+        line-height: 20px;
+      }
+      &__first-buy {
+        display: block;
+        font-size: $default_size;
+        line-height: 20px;
         color: $default_color;
       }
     }

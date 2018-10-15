@@ -12,7 +12,8 @@ var icons = {
   'credit-card': '/static/icons/credit-card.svg',
   'return': '/static/icons/return.svg',
   'shipping': '/static/icons/shipping.svg',
-  'phone-call': '/static/icons/phone-call.svg'
+  'phone-call': '/static/icons/phone-call.svg',
+  'promotion': '/static/icons/promotion.svg'
 }
 
 export default icons
