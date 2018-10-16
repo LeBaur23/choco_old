@@ -13,7 +13,10 @@ var icons = {
   'return': '/static/icons/return.svg',
   'shipping': '/static/icons/shipping.svg',
   'phone-call': '/static/icons/phone-call.svg',
-  'promotion': '/static/icons/promotion.svg'
+  'promotion': '/static/icons/promotion.svg',
+  'vk': '/static/icons/vk.svg',
+  'fb': '/static/icons/fb.svg',
+  'instagram': '/static/icons/instagram.svg'
 }
 
 export default icons

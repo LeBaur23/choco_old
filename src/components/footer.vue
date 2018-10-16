@@ -19,13 +19,13 @@
             <h3 class="social-block-wrapper--heading">Мы в соц.сетях</h3>
             <div class="social-block-wrapper__social-links social-links-wrapper w-100 d-flex flex-wrap">
               <div class="social-links-wrapper__link">
-                <img class="h-100 w-100" src="/static/icons/vk.svg">
+                <chocomart-icon :color="'#c4c4c4'" :icon="'vk'" :font_size="'32px'"></chocomart-icon>
               </div>
               <div class="social-links-wrapper__link">
-                <img class="h-100 w-100" src="/static/icons/fb.svg">
+                <chocomart-icon :color="'#c4c4c4'" :icon="'fb'" :font_size="'32px'"></chocomart-icon>
               </div>
               <div class="social-links-wrapper__link">
-                <img class="h-100 w-100" src="/static/icons/instagram.svg">
+                <chocomart-icon :color="'#c4c4c4'" :icon="'instagram'" :font_size="'32px'"></chocomart-icon>
               </div>
             </div>
           </div>

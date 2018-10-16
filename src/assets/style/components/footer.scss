@@ -43,6 +43,14 @@
               border-radius: 5px;
               margin-right: 16px;
               margin-bottom: 5px;
+              cursor: pointer;
+              &:hover {
+                svg {
+                  path{
+                    fill: $brand_lighter !important;
+                  }
+                }
+              }
             }
             .rating-wrapper {
               height: 52px;
