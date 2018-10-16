@@ -1,0 +1,32 @@
+.client-reminder-wrapper {
+  height: 74px;
+  background: $background_promotion;
+  .content-wrapper {
+    width: 1280px;
+    &--promo-text {
+      font-size: $h3_size;
+      color: $footer_text_color;
+      font-weight: normal;
+    }
+    &--client-email {
+      width: 293px;
+      height: 38px;
+      border: 1px solid #b1b1b1;
+      border-radius: 4px;
+      font-size: $default_size;
+      color: $default_color;
+      padding: 0 10px;
+      margin: 0 20px 0 14px;
+    }
+    &--submit {
+      width: 147px;
+      height: 38px;
+      box-shadow: 0 5px 6px 0 rgba(223, 19, 19, 0.3);
+      background-color: $brand_color;
+      border: 1px solid $brand_color;
+      border-radius: 4px;
+      color: $white_color;
+      font-size: $h3_size;
+    }
+  }
+}
