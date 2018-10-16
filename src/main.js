@@ -12,16 +12,20 @@ import 'styles/variables.scss'
 // components
 import LINK_HEADER from './components/link-header.vue'
 import HEADER from './components/header.vue'
+import FOOTER from './components/footer'
 import CHOCO_ICONS from './components/choco-icons.vue'
-import CATEGORY_CARD from  './components/category-card.vue'
+import CATEGORY_CARD from './components/category-card.vue'
 import PRODUCT from './components/product-card'
 import INPUT_TEXT from './components/input-text.vue'
+import SUBSCRIBE from './components/subscribe'
 Vue.component('chocomart-link-header', LINK_HEADER)
 Vue.component('chocomart-header', HEADER)
+Vue.component('chocomart-footer', FOOTER)
 Vue.component('chocomart-icon', CHOCO_ICONS)
 Vue.component('category-card', CATEGORY_CARD)
 Vue.component('chocomart-product', PRODUCT)
 Vue.component('input-text', INPUT_TEXT)
+Vue.component('chocomart-subscribe', SUBSCRIBE)
 
 Vue.config.productionTip = false
 
