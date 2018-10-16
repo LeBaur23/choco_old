@@ -51,5 +51,139 @@
         </button>
       </div>
     </div>
+    <div class="categories" @mouseleave="leave_category()">
+      <div class="categories-wrapper">
+        <div class="category" v-for="category,y in categories_info" :id="'category-'+ y" @mouseover="hover_subcategory(y)">
+          <h4>
+            {{ category.title }}
+          </h4>
+        </div>
+      </div>
+      <div class="subcategory" :class="{'subcategory-active': current_id === y }" v-for="category,y in  categories_info " v-show="current_id === y && category.subcategories_info.length !== 0">
+        <div class="subcategory-wrapper">
+          <div class="subcategory-item col-2 pb-4" v-for="subcategory in category.subcategories_info">
+            <img src="/static/category/fridge.svg" alt="">
+            <h4>ТЕХНИКА ДЛЯ ДОМА</h4>
+            <ul>
+              <li >
+                <a href="">
+                  <!--Акустические системы-->
+                  {{ subcategory.title }}
+                </a>
+              </li>
+              <li>
+              <a href="">
+              Музыкальные центры
+              </a>
+              </li>
+              <li>
+              <a href="">
+              Наушники
+              </a>
+              </li>
+              <li>
+              <a href="">
+              Портативная акустика
+              </a>
+              </li>
+              <li>
+              <a href="">
+              Диктофоны
+              </a>
+              </li>
+              <li>
+              <a href="">
+              Микрофоны
+              </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
+
+
+<script>
+  export default {
+    data () {
+      return {
+        show_sub: false,
+        current_id: -1,
+        categories_info: [
+          {
+            title: 'Бытовая техника',
+            subcategories_info: [
+              {
+                title: 'Links'
+              }
+            ]
+          },
+          {
+            title: 'Смартфоны и гаджеты',
+            subcategories_info: [
+              {
+                title: 'Links somtehiasda '
+              }
+            ]
+          },
+          {
+            title: 'Компьютеры и офис',
+            subcategories_info: []
+          },
+          {
+            title: 'ТВ, аудио и видео',
+            subcategories_info: []
+          },
+          {
+            title: 'Товары для дома',
+            subcategories_info: []
+          },
+          {
+            title: 'Книги',
+            subcategories_info: []
+          },
+          {
+            title: 'Товары для детей',
+            subcategories_info: []
+          },
+          {
+            title: 'Красота и здоровье',
+            subcategories_info: []
+          },
+          {
+            title: 'Досуг',
+            subcategories_info: []
+          },
+          {
+            title: 'Активный отдых',
+            subcategories_info: []
+          },
+          {
+            title: 'Промышленная техника',
+            subcategories_info: []
+          }
+        ]
+      }
+    },
+    methods: {
+      leave_category() {
+        var category = document.getElementById('category-'+ this.current_id)
+        category.classList.remove('category-active')
+        this.current_id = -1
+      },
+      hover_subcategory (id) {
+        if (this.current_id !== id) {
+          var category = document.getElementById('category-'+ id)
+          category.classList.add('category-active')
+          var last_category = document.getElementById('category-'+ this.current_id)
+          if (last_category!== null) {
+            last_category.classList.remove('category-active')
+          }
+        }
+        this.current_id = id
+      }
+    }
+  }
+</script>

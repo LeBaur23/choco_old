@@ -87,3 +87,10 @@ html, body {
   font-weight: 100;
   color: $default_color;
 }
+ul {
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+  }
+}

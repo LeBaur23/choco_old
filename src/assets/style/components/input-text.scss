@@ -1,14 +1,5 @@
 .input-text {
   position: relative;
-    &:before {
-    content : "";
-    position: absolute;
-    left    : 0;
-    bottom  : 0;
-    height  : 1px;
-    width   : 50%;  /* or 100px */
-    border-bottom: 1px solid $brand_color;
-  }
   input {
     width: 640px;
     height: 40px;
@@ -19,9 +10,13 @@
     font-size: 16px;
     padding-right: 30px;
     color: $dark_color;
-
     &:focus {
       outline: none;
+      & + .choco-icon {
+        .choco-icon__svg {
+            color: $choco_yellow !important;
+          }
+      }
     }
     &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: $input_border;

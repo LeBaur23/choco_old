@@ -71,7 +71,7 @@
       cursor: pointer;
       box-shadow: 0 2px 5px 0 rgba(130, 130, 130, 0.11);
       height: 40px;
-      width: 100px;
+      width: 104px;
       font-size: 16px;
       border-radius: 5px;
       border: none;
@@ -152,5 +152,120 @@
         }
       }
     }
+  }
+  .categories {
+    width: 1210px;
+    margin: 0 auto;
+    @media (max-width: 1280px) {
+      width: 1280px;
+      .category {
+        &:first-child {
+          padding-left: 50px;
+        }
+        &:last-child {
+          padding-right: 50px;
+        }
+      }
+    }
+    &-wrapper{
+      display: flex;
+      background-color: $white_color;
+      .category {
+        position: relative;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        padding: 0 15px;
+        height: 56px;
+        cursor: pointer;
+        &-active {
+          background-color: $brand_darker;
+          &:before {
+            display: none;
+          }
+          h4 {
+            color: $white_color !important;
+          }
+        }
+        h4 {
+          font-size: 16px;
+          font-weight: normal;
+          margin: 0;
+          color: $dark_color;
+        }
+        &:last-child{
+          &:before {
+            display: none;
+          }
+        }
+        &:before {
+          content: "";
+          height: 16px;
+          border-left: 1px solid #e4e4e4;
+          position: absolute;
+          right: 0;
+          top:50%;
+          transform: translateY(-50%);
+        }
+        &-subcategory {
+          position: absolute;
+          width: 1210px;
+        }
+      }
+    }
+  }
+  .subcategory {
+    display: flex ;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    min-width: 1280px;
+    box-shadow: 0 3px 16px 0 rgba(112, 112, 112, 0.16);
+    background-color: $white_color;
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      width: 1280px;
+      margin: 0 auto;
+      padding: 20px 35px;
+      background-color: $white_color;
+    }
+    &-item {
+      padding-bottom: 15px;
+      &:after {
+        content: "";
+        height: 100%;
+        border-left: 1px solid #e4e4e4;
+        position: absolute;
+        right: 0;
+        top:50%;
+        transform: translateY(-50%);
+      }
+      &:nth-child(6n) {
+        &:after {
+          display: none;
+        }
+      }
+      h4 {
+        font-size: 18px;
+        font-weight: 500;
+        color: $brand_darker;
+        margin-top: 15px;
+        margin-bottom: 10px;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        text-decoration: none;
+        font-size: 14px;
+        color: $default_color;
+        font-weight: normal;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
   }
 }
