@@ -34,7 +34,17 @@
             <div class="social-block-wrapper__social-links social-links-wrapper w-100 d-flex flex-wrap">
               <div class="social-links-wrapper__rating rating-wrapper d-flex">
                 <div class="rating-wrapper__value d-flex align-items-center justify-content-center text-left h-100 w-50">Рейтинг <br> магазина</div>
-                <div class="rating-wrapper__yandex"></div>
+                <div class="rating-wrapper__yandex yandex-wrapper w-50 h-100 d-flex flex-column">
+                  <div class="yandex-wrapper__logo w-100 h-50 d-flex align-items-end justify-content-center">
+                    <img src="../assets/images/yandex.png">
+                  </div>
+                  <div class="yandex-wrapper__rating w-100 h-50 d-flex align-items-start justify-content-center">
+                    <div class="rating-yandex-wrapper">
+                      <div class="rating-yandex-wrapper__stars-background h-100" :style="{width: '100%'}"></div>
+                      <img src="/static/icons/start.svg">
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

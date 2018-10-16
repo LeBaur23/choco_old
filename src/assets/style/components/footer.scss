@@ -54,6 +54,31 @@
                 background: #ececec;
                 font-size: $default_size;
               }
+              .yandex-wrapper {
+                &__logo {
+                  img {
+                    height: 15px;
+                    width: 74px;
+                    margin-bottom: 3px;
+                  }
+                }
+                &__rating {
+                  .rating-yandex-wrapper {
+                    position: relative;
+                    height: 14px;
+                    width: 74px;
+                    &__stars-background {
+                      background: $choco_yellow;
+                    }
+                    img {
+                      position: absolute;
+                      height: 14px;
+                      width: 75px;
+                      top: 0;
+                    }
+                  }
+                }
+              }
             }
           }
         }
