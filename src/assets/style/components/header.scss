@@ -222,6 +222,7 @@
     min-width: 1280px;
     box-shadow: 0 3px 16px 0 rgba(112, 112, 112, 0.16);
     background-color: $white_color;
+    z-index: 2;
     &-wrapper {
       display: flex;
       flex-wrap: wrap;

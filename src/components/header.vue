@@ -59,7 +59,7 @@
           </h4>
         </div>
       </div>
-      <div class="subcategory" :class="{'subcategory-active': current_id === y }" v-for="category,y in  categories_info " v-show="current_id === y && category.subcategories_info.length !== 0">
+      <div class="subcategory" v-for="category,y in  categories_info " v-show="current_id === y && category.subcategories_info.length !== 0">
         <div class="subcategory-wrapper">
           <div class="subcategory-item col-2 pb-4" v-for="subcategory in category.subcategories_info">
             <img src="/static/category/fridge.svg" alt="">
