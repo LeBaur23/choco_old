@@ -35,11 +35,13 @@
       }
     }
   }
-  .category {
-    svg {
-      width: auto !important;
-      path {
-        transition: 0.4s;
+  @media (min-width: 993px) {
+    .category {
+      svg {
+        width: auto !important;
+        path {
+          transition: 0.4s;
+        }
       }
     }
   }

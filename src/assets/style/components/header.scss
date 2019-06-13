@@ -6,6 +6,12 @@
     margin: 0 auto;
     display: flex;
     background-color: $white_color;
+    @media (max-width: 1280px) {
+      width: 100%;
+    }
+    @media(max-width: 992px) {
+      display: none !important;
+    }
     &-icon {
       position: relative;
       &-dropdown {
@@ -43,14 +49,22 @@
       }
     }
     &_input {
+      width: 640px;
       height: 40px;
       margin: 18px 50px 19px 0;
+      @media (max-width: 1280px) {
+        width: calc(100% - 492px);
+        margin-right: 35px;
+      }
     }
     &-buttons {
       height: 40px;
       display: flex;
       align-items: center;
       margin: 20px 0 17px 0;
+      @media (max-width: 1280px) {
+        margin-right: 50px;
+      }
       .choco-icon{
         margin-right: 35px;
         padding: 20px 0;
@@ -156,8 +170,36 @@
   .categories {
     width: 1210px;
     margin: 0 auto;
+    @media(max-width: 992px) {
+      display: none !important;
+    }
     @media (max-width: 1280px) {
-      width: 1280px;
+      width: 100%;
+      overflow-y: hidden;
+      &::-webkit-scrollburger- {
+        width: 10px;
+        height: 5px;
+      }
+      &::-webkit-scrollburger-:hover {
+        width: 10px;
+        height: 10px;
+      }
+      /* Track */
+      &::-webkit-scrollburger--track {
+        background: #f1f1f1;
+      }
+      &:hover::-webkit-scrollburger- {
+        width: 40px;
+      }
+      /* Handle */
+      &::-webkit-scrollburger--thumb {
+        background: #888;
+      }
+
+      /* Handle on hover */
+      &::-webkit-scrollburger--thumb:hover {
+        background: red;
+      }
       .category {
         &:first-child {
           padding-left: 50px;
@@ -176,8 +218,10 @@
         align-items: center;
         text-align: left;
         padding: 0 15px;
-        height: 56px;
         cursor: pointer;
+        @media (max-width: 1280px) {
+          padding: 10px 15px;
+        }
         &-active {
           background-color: $brand_darker;
           &:before {
@@ -268,5 +312,52 @@
       }
     }
 
+  }
+  .mobile-header {
+    padding: 10px 5px;
+    &_burger {
+      margin-left: 10px;
+      .burger-container {
+        display: inline-block;
+        cursor: pointer;
+      }
+      .burger-1, .burger-2, .burger-3 {
+        width: 18px;
+        height: 2px;
+        background-color: #000000;
+        margin: 6px 0;
+        transition: 0.4s;
+        pointer-events: none;
+      }
+      .change {
+        .burger-1 {
+          -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+          transform: rotate(-45deg) translate(-6px, 6px);
+        }
+        .burger-2 {opacity: 0;}
+        .burger-3 {
+          -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+        }
+      }
+    }
+    &_icon {
+      width: 110px;
+      height: 25px;
+      overflow: hidden;
+      margin-left: 10px;
+      img {
+        width: 110px;
+        height: 78px;
+        margin-top: -22px;
+      }
+    }
+    &_actions {
+      margin-left: auto;
+      margin-right: 10px;
+      .choco-icon {
+        margin-left: 10px;
+      }
+    }
   }
 }

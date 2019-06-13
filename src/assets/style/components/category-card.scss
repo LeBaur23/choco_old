@@ -1,34 +1,64 @@
 .category-card {
   width: 180px;
   height: 180px;
-  margin: 5px;
   border-radius: 4px;
   position: relative;
   background-color: white;
   border: solid 1px $border_color;
   cursor: pointer;
-  &:hover {
-    .category-card-border {
-      width: 180px;
-    }
+  @media (max-width: 992px) {
+    width: 50%;
+    height: 55px;
+    border-radius: 0;
     svg {
-      width: auto !important;
-      path{
-        fill: currentcolor !important;
-      }
+      width: 22px !important;
     }
-
+    &:nth-child(2n + 1) {
+      border-left: none;
+      border-top: none;
+    }
+    &:nth-child(2n) {
+      border-right: none;
+      border-left: none;
+      border-top: none;
+    }
   }
+  @media (min-width: 993px) {
+    &:hover {
+      .category-card-border {
+        width: 180px;
+      }
+      svg {
+        width: auto !important;
+        path{
+          fill: currentcolor !important;
+        }
+      }
+
+    }
+  }
+
   &-info {
     width: 129px;
+    @media (max-width: 992px) {
+      flex-wrap: nowrap;
+      width: 100%;
+    }
   }
   &-img {
-
+    @media (max-width: 992px) {
+      width: 20% !important;
+    }
   }
   &-text {
     margin-top: 20px;
     height: 32px;
     font-size: 14px;
+    @media (max-width: 992px) {
+      width: 80% !important;
+      height: auto;
+      margin-top: 0;
+    }
   }
   &-border{
     position: absolute;
@@ -38,5 +68,8 @@
     bottom: -1px;
     border-radius: 10px;
     background-color: $brand_darker;
+    @media (max-width: 992px) {
+      display: none;
+    }
   }
 }

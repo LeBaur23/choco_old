@@ -13,7 +13,7 @@
         <div class="header-icon">
           <chocomart-icon :counted="'top'" :count="'3'" :icon="'shopping'" :font_size="'22px'">
             <div class="header-icon-dropdown">
-              <div v-for="i in 3" class="header-basket-product">
+              <div v-for="(i,y) in 3" v-bind:key="'header-basket-product' + y" class="header-basket-product">
                 <div class="basket-img">
                   <img width="100%" class="header-basket_img" src="https://www.bellmts.ca/file_source/mts/content_types/wireless_devices/iphones/Apple-iPhone-XsMax@2x.png" alt="">
                 </div>
@@ -59,9 +59,9 @@
           </h4>
         </div>
       </div>
-      <div class="subcategory" v-for="category,y in  categories_info " v-show="current_id === y && category.subcategories_info.length !== 0">
+      <div class="subcategory" v-for="(category,y) in  categories_info " v-bind:key="'subcategory-' + y"  v-show="current_id === y && category.subcategories_info.length !== 0">
         <div class="subcategory-wrapper">
-          <div class="subcategory-item col-2 pb-4" v-for="subcategory in category.subcategories_info">
+          <div class="subcategory-item col-2 pb-4" v-for="(subcategory,z) in category.subcategories_info" v-bind:key="'subcategory-item-' + z">
             <img src="/static/category/fridge.svg" alt="">
             <h4>ТЕХНИКА ДЛЯ ДОМА</h4>
             <ul>
@@ -101,14 +101,30 @@
         </div>
       </div>
     </div>
+    <div class="mobile-header d-flex align-items-center">
+      <div class="mobile-header_burger">
+        <div class="burger-container" @click="open_sidebar = !open_sidebar" v-bind:class="{change: open_sidebar}">
+          <div class="burger-1"></div>
+          <div class="burger-2"></div>
+          <div class="burger-3"></div>
+        </div>
+      </div>
+      <div class="mobile-header_icon">
+        <img src="../assets/images/logo.svg" alt="">
+      </div>
+      <div class="mobile-header_actions">
+        <chocomart-icon :icon="'search'" :font_size="'18px'"></chocomart-icon>
+        <chocomart-icon :icon="'cart'" :font_size="'18px'"></chocomart-icon>
+      </div>
+    </div>
   </div>
 </template>
-
 
 <script>
   export default {
     data () {
       return {
+        open_sidebar: false,
         show_sub: false,
         current_id: -1,
         categories_info: [
@@ -168,10 +184,15 @@
       }
     },
     methods: {
+      toggleBurger (event) {
+        console.log(event.target);
+      },
       leave_category() {
         var category = document.getElementById('category-'+ this.current_id)
-        category.classList.remove('category-active')
-        this.current_id = -1
+        if (category !== null) {
+          category.classList.remove('category-active')
+          this.current_id = -1
+        }
       },
       hover_subcategory (id) {
         if (this.current_id !== id) {

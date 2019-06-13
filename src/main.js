@@ -18,6 +18,7 @@ import CATEGORY_CARD from './components/category-card.vue'
 import PRODUCT from './components/product-card'
 import INPUT_TEXT from './components/input-text.vue'
 import SUBSCRIBE from './components/subscribe'
+import ITEM_CARD from './components/item-card'
 Vue.component('chocomart-link-header', LINK_HEADER)
 Vue.component('chocomart-header', HEADER)
 Vue.component('chocomart-footer', FOOTER)
@@ -26,6 +27,10 @@ Vue.component('category-card', CATEGORY_CARD)
 Vue.component('chocomart-product', PRODUCT)
 Vue.component('input-text', INPUT_TEXT)
 Vue.component('chocomart-subscribe', SUBSCRIBE)
+Vue.component('item-card', ITEM_CARD)
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false
 

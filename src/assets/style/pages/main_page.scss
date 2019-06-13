@@ -1,0 +1,41 @@
+.main {
+  &-carousel {
+    &-slider {
+      padding-bottom: 50%;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  &-popular {
+    &-products {
+      background-color: #ebebeb;
+      .swiper-container {
+        border-bottom: 1px solid #ebebeb;
+      }
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background: $brand_color;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    background-color: $brand_color;
+    border-radius: 50%;
+    opacity: 0.8;
+    width: 28px;
+    height: 28px;
+    margin-top: 0;
+    transform: translateY(-50%);
+    background-size: 12px;
+  }
+  &-title {
+    font-size: 18px;
+    line-height: 0.89;
+    letter-spacing: normal;
+    font-weight: lighter;
+    color: $text_color;
+    background-color: white;
+    padding: 1.33em 0;
+    margin: 0;
+    border-bottom: 1px solid #ebebeb;
+  }
+}

@@ -1,5 +1,8 @@
 .link-header-wrapper {
   height: 40px;
+  @media(max-width: 934px) {
+    display: none !important;
+  }
   .content-wrapper {
     width: 1280px;
     .feedback-wrapper {
@@ -75,6 +78,9 @@
       float: left;
       width: 425px;
       margin: 0 65px;
+      @media(max-width: 1065px) {
+        margin: 0;
+      }
       .phone-wrapper {
         margin-right: 30px;
         font-size: $category_size;

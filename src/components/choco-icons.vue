@@ -21,6 +21,7 @@
       }
     },
     beforeMount () {
+      console.log(this.icon);
       let path_to_file = ''
       if (this.category === undefined) {
         this.icon_url = icons
