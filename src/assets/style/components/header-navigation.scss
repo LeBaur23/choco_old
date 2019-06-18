@@ -1,0 +1,15 @@
+.header-navigation {
+  position: relative;
+  &_back {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(180deg);
+    text-decoration: none;
+    color: $text_color;
+  }
+  h4 {
+    font-weight: lighter;
+    font-size: $default_size;
+  }
+}

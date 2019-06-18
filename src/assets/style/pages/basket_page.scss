@@ -1,0 +1,129 @@
+.basket {
+  &-header {
+    &-wrapper {
+      padding: 20px;
+      border-bottom: 1px solid $border_color;
+    }
+    .choco-icon {
+      margin: 0 10px;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fdcc05;
+        top: 50%;
+        right: 0;
+        transform: translate(25px ,-50%);
+      }
+      &:first-child {
+        margin-right: 10px;
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-left: 10px;
+        margin-right: 0;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #fdcc05;
+          top: 50%;
+          left: 0;
+          transform: translate(-25px ,-50%);
+        }
+      }
+    }
+    &_border {
+      border-bottom: 1px dashed $border_color;
+      flex: 1;
+      align-self: center;
+    }
+  }
+  &-product {
+    &-list {
+      padding: 20px 10px;
+      border-bottom: 1px solid $border_color;
+    }
+    &-image {
+      width: 50%;
+    }
+    &-info {
+      h4 {
+        margin: 0 0 15px 0;
+        font-size: 14px;
+        font-weight: normal;
+        color: #707070;
+      }
+      h5 {
+        color: #2d3946;
+        font-size: 23px;
+        margin-bottom: 0;
+        margin-top: 15px;
+      }
+    }
+    &-close {
+      width: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-total {
+      background-color: #fafafa;
+      display: inline-block;
+      width: 100%;
+      padding: 0 20px;
+      h4 {
+        &:first-child {
+          font-size: 20px;
+          font-weight: 500;
+          color: #2d3946;
+          margin-bottom: 0;
+        }
+        font-size: 14px;
+        font-weight: normal;
+        color: #707070;
+        span {
+          font-weight: bold;
+          color: #2d3946;
+        }
+
+
+      }
+    }
+    &-amount {
+      box-shadow: 0 2px 4px 0 rgba(130, 130, 130, 0.11);
+      border: solid 1px #ebebeb;
+      width: fit-content;
+      border-radius: 5px;
+      &_add, &_remove {
+        background-color: #ebebeb;
+        width: 24px;
+        height: 28px;
+      }
+      &_add {
+        border-radius: 3px 0 0 3px;
+      }
+      &_remove {
+        border-radius: 0 3px 3px 0;
+      }
+      &_text {
+        min-width: 40px;
+      }
+    }
+  }
+  &-buy {
+    width: 212px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(130, 130, 130, 0.11);
+    background-color: $brand_color;
+    color: white;
+    outline: none;
+    border: none;
+  }
+}

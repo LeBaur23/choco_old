@@ -9,10 +9,13 @@
 @import "components/input-text";
 @import "components/subscribe";
 @import "components/item-card";
+@import "components/header-navigation";
 
 
 // pages
 @import "./pages/main_page";
+@import "./pages/product_page";
+@import "./pages/basket_page";
 
 
 // TYPOGRAPHY
@@ -46,6 +49,26 @@
 }
 
 // GLOBAL STYLES
+
+// swiper style
+.swiper-pagination-bullet-active {
+  background: $brand_color;
+}
+.swiper-slide {
+  a {
+    text-decoration: none;
+  }
+}
+.swiper-button-prev, .swiper-button-next {
+  background-color: $brand_color;
+  border-radius: 50%;
+  opacity: 0.8;
+  width: 28px !important;
+  height: 28px !important;
+  margin-top: 0 !important;
+  transform: translateY(-50%) !important;
+  background-size: 12px !important;
+}
 
 // Grid
 .overflow-auto {

@@ -13,6 +13,11 @@
     svg {
       width: 22px !important;
     }
+    a {
+      width: 100%;
+      text-decoration: none;
+      color: $text_color;
+    }
     &:nth-child(2n + 1) {
       border-left: none;
       border-top: none;
