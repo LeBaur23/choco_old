@@ -3,7 +3,7 @@
     <div class="container-fluid mt-5">
       <div class="row m-0 justify-content-center">
         <div id="CategoryProducts" >
-          <category-card v-for="i in datas" :icon="i.img" :title="i.title"></category-card>
+          <category-card v-for="(i, index) in datas" :icon="i.img" :title="i.title" v-bind:key="'new_slider-test-' + index"></category-card>
           <category-card :discount="true"></category-card>
         </div>
       </div>

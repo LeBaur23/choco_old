@@ -3,6 +3,7 @@ var icons = {
   'bonus': '../static/icons/coins.svg',
   'basket-card': '/static/icons/basket-card.svg',
   'close': '/static/icons/close.svg',
+  'checked': '/static/icons/checked.svg',
   'heart': '../static/icons/heart.svg',
   'search': '../static/icons/search.svg',
   'compare': '../static/icons/compare.svg',

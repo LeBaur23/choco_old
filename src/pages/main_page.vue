@@ -14,7 +14,7 @@
     <h4 class="text-center main-title">Популярные товары</h4>
     <div class="main-popular-products">
       <swiper :options="popularOption">
-        <swiper-slide v-for="(slide,index) in 5">
+        <swiper-slide v-for="(slide,index) in 5" v-bind:key="'popular_slider-' + index">
           <a :href="slide.link">
             <item-card :title="'Смартфон Apple iPhone 6 32 Gb Gold-' + index" :price="'10000'"></item-card>
           </a>
@@ -26,7 +26,7 @@
     <h4 class="text-center main-title">Новинки</h4>
     <div class="main-popular-products">
       <swiper :options="popularOption">
-        <swiper-slide v-for="(slide,index) in 5">
+        <swiper-slide v-for="(slide,index) in 5" v-bind:key="'new_slider-' + index">
           <a :href="'https://www.youtube.com/watch?v=8Is97V3oq_s'">
             <item-card :title="'Смартфон Apple iPhone 6 32 Gb Gold-' + index" :price="'10000'"></item-card>
           </a>
@@ -37,12 +37,12 @@
     </div>
     <h4 class="text-center main-title">Категории товаров</h4>
     <div class="product-categories d-flex flex-wrap">
-      <category-card v-for="i in categories" :icon="i.img" :title="i.title" :link="'https://www.youtube.com/watch?v=8Is97V3oq_s'"></category-card>
+      <category-card v-for="i in categories" :icon="i.img" v-bind:key="i.title + '-' + index" :title="i.title" :link="'https://www.youtube.com/watch?v=8Is97V3oq_s'"></category-card>
 <!--      <category-card :discount="true"></category-card>-->
     </div>
     <h4 class="text-center main-title">Распродажа</h4>
     <swiper :options="popularOption">
-      <swiper-slide v-for="(slide,index) in 5">
+      <swiper-slide v-for="(slide,index) in 5" v-bind:key="'sales_slider-' + index">
         <a :href="slide.link">
           <item-card :title="'Смартфон Apple iPhone 6 32 Gb Gold-' + index" :price="'10000'"></item-card>
         </a>

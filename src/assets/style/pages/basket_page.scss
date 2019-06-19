@@ -8,15 +8,27 @@
       margin: 0 10px;
       position: relative;
       &:after {
-        content: "";
         position: absolute;
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background-color: #fdcc05;
         top: 50%;
         right: 0;
+        display: flex;
+        justify-content: center;
         transform: translate(25px ,-50%);
+      }
+      &_done {
+        &:after {
+          content: url('/static/icons/checked.svg');
+          background-color: $brand_color;
+        }
+      }
+      &_active {
+        &:after {
+          content: "";
+          background-color: #fdcc05;
+        }
       }
       &:first-child {
         margin-right: 10px;
@@ -26,12 +38,10 @@
         margin-left: 10px;
         margin-right: 0;
         &:after {
-          content: "";
           position: absolute;
           width: 20px;
           height: 20px;
           border-radius: 50%;
-          background-color: #fdcc05;
           top: 50%;
           left: 0;
           transform: translate(-25px ,-50%);
@@ -50,9 +60,14 @@
       border-bottom: 1px solid $border_color;
     }
     &-image {
-      width: 50%;
+      width: 35%;
+      min-width: 35%;
+      max-width: 35%;
     }
     &-info {
+      width: 50%;
+      max-width: 50%;
+      min-width: 50%;
       h4 {
         margin: 0 0 15px 0;
         font-size: 14px;

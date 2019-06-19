@@ -21,7 +21,6 @@
       }
     },
     beforeMount () {
-      console.log(this.icon);
       let path_to_file = ''
       if (this.category === undefined) {
         this.icon_url = icons
@@ -30,7 +29,6 @@
       else {
         path_to_file = this.category
       }
-      console.log(path_to_file)
       let svg_icon = ''
       function readTextFile(file)
       {
